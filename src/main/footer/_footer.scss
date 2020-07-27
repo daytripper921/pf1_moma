@@ -1,0 +1,203 @@
+#familysite {
+    width: 100%;  border-top: 1px solid #ddd;
+   
+    .inner {
+        width: 1180px; height: 60px; margin: 0 auto; 
+        box-sizing: border-box; background:#fff;
+
+          .wrap{
+            width: 100%; padding: 0 40px;  position: relative; margin: 0 auto; box-sizing: border-box;
+
+            .banner {
+                width: 100%;
+                overflow: hidden;
+                    
+                .partners {
+                    width: calc((100% / 5) * 7);
+                    margin-left: calc(-100% / 5); 
+
+                    &::after {display: block; content: ''; clear: both;}
+
+                    li { 
+                        width: calc(100%/7); height: 60px; padding: 5px 10px; float: left; box-sizing: border-box;
+
+                        a {
+                            width: 100%; height: 100%; display: block;
+                        }
+
+                        @for $i from 1 through 7 {
+                        &.partner#{$i} a {background: url('../img/partner0#{$i}.png') no-repeat center center; background-size: contain;}
+                        }
+                        // @for $i from 1 through 7 {
+                        //     &:nth-of-type(#{$i}) > a {background-image: url(img/0#{$i}.png);}
+                        // }
+
+                    }
+                }
+
+                
+                .btnPrev {
+                    display: block; 
+                    position: absolute; height: 100%; width: 40px; left: 0; top: 0;
+
+                    &::before {
+                        content:''; width: 60%; height: 1px; background:#aaa; position: absolute; top: 50%; left: 10px; transform-origin: left center; transform: rotate(-45deg);
+                    }
+                    &::after {
+                        content:''; width: 60%; height: 1px; background: #aaa; position: absolute; top: 50%; left: 10px; transform-origin: left center; transform: rotate(45deg);
+                    }
+                }
+
+                .btnNext {
+                    display: block;
+                    position: absolute; height: 100%; width: 40px; right: 0; top: 0;
+
+                    &::before {
+                        content:''; width: 60%; height: 1px; background: #aaa; position: absolute; top: 50%; right: 10px; transform-origin: right center; transform: rotate(-45deg);
+                    }
+                    &::after {
+                        content:''; width: 60%; height: 1px; background: #aaa; position: absolute; top: 50%; right: 10px; transform-origin: right center; transform: rotate(45deg);
+                    }
+                }
+            }
+          }
+        
+    }
+
+}
+
+//쿠키
+#cookiePop {
+    width: 300px; height: 200px; background: #f2efeb; border-radius: 10px; box-shadow: 10px 10px 20px rgba(0,0,0,0.3); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); box-sizing: border-box; padding: 20px 20px 0px 20px; z-index: 800;
+
+    .inner {
+        h2{font: 20px/1 'arial'; text-align: center; margin-bottom: 10px;}
+        .cook {
+            width: 100%; height: 110px; margin-bottom: 10px;
+            background: url('../img/cookie.png') no-repeat center center; background-size: contain;
+        }
+        #ck {float: left;}
+        label {
+            float: left;
+            margin-left: 2px; color: #333;
+        }
+        .ck_close {
+            font: 16px/1 '맑은 고딕'; color: #333; float: right;
+        }
+    }
+}
+
+
+#footer {
+    width: 100%; padding: 50px 0 30px; background: #333;
+
+    .inner {
+        width: 1180px; margin: 0 auto; position: relative; 
+    
+        .wrap {
+            width: 100%;
+
+            &::after {content:''; display: block; clear: both;}
+            h1 {
+                float: left; position: absolute; left: 20px; top: 20%;
+                a img {width: 130px; margin-left: 10px;}
+            }
+            
+            .policy {
+                width: 30%;margin-left: 30%;float: left; height: 100px; margin-bottom: 60px;
+                .list-1{
+                    &::after {content:''; display: block; clear: both;}
+                    li { 
+                        margin-bottom: 10px; float: left;width: 50%;
+                        a {font: 12px/1 'Roboto', sans-serif; color:#ccc;}
+                    }
+
+                }
+
+                .list-2{
+                    float: right; width: 40%; margin-bottom: 20px;
+                }
+
+                .list-3{
+                    float: right; width: 40%; margin-bottom: 20px;
+                }
+            }
+
+            dt {font: bold 12px/1.8 'Roboto', sans-serif; color: #ccc;}
+            dd {font: 12px/1.5 'Roboto', sans-serif; color: #ccc;}
+            p {float: left; width: 100%;font: 10px/1.5 'Roboto', sans-serif; color: #ccc; padding-top: 30px; border-top: 1px solid #ccc;text-align: center;}
+        }
+    }
+}
+
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    #familysite {
+        .inner {
+            width: 100%;
+        
+            .wrap .banner .partners {
+                width: calc((100% / 4)*7);
+                margin-left: calc(-100% / 4);
+            }
+        }   
+    }
+
+    #footer {
+        .inner {
+            width: 90%; 
+            .wrap {
+                h1 {left: 0;}
+                .policy {
+                    width: 35%;margin-left: 25%;
+                
+                    .list-1 {
+                        &::after {content:''; display: block; clear: both;}
+                        li { 
+                            margin-bottom: 10px; float: left;width: 50%;
+                            a {font: 12px/1 'arial'; color:#ccc;}
+                        }
+                    }
+
+                    .list-2 {float: right; width: 40%; margin-bottom: 20px;}
+                    .list-3 {float: right; width: 40%; margin-bottom: 20px;}
+                }
+            }
+        }
+    }
+
+}
+
+
+/* mobile */
+@media screen and (max-width:$mobile){
+
+    #familysite {
+        .inner {
+                   
+            .wrap .banner .partners {
+                width: calc((100% / 2)*7);
+                margin-left: calc(-100% / 2);
+            }
+        }   
+    }
+
+    #footer {
+        .inner {
+            .wrap {
+                h1 {left: 0; top: 40px;}
+                .policy {
+                    width: 60%; float: right; height: 70px;
+                
+                    
+                }
+                .list-2 {float: left; width: 100%; margin-bottom: 0;}
+                .list-3 {float: left; width: 100%; margin-bottom: 20px;}
+                dt {display: inline-block; font-size: 13px; margin-right: 10px;}
+                dd {display: inline-block; margin-right: 5px;}
+                p {float: left; width: 100%;font: 10px/1.5 'arial'; color: #ccc; padding-top: 20px; border-top: 1px solid #ccc;text-align: center;}
+            }
+        }
+    }
+}

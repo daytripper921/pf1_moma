@@ -1,0 +1,66 @@
+#notice {
+    width: 100%; padding: 150px 0;
+
+    .inner {
+        width: 1180px; margin: 0 auto;
+    
+        h1 { 
+            font: 500 34px/1 'Barlow', sans-serif; color: #333; text-align: left; margin-bottom: 50px; position: relative; padding-bottom: 5px;
+            &::before {content:''; display: block; width: 200px; height: 2.5px; position: absolute; left: 0px; bottom:0px; background: #ccc; transition: all 0.5s;} 
+        }
+
+        ul{
+            width: 100%;
+            &::after {content:''; display: block; clear: both;}
+            li {
+                float: left; width: 46%; margin-top: 20px;
+                span {font: italic 12px/1 'Roboto', sans-serif; color:#888; display: inline-block;width: 100%; margin-bottom: 10px;}
+                a{font: 14px/1 'Roboto', sans-serif; color: #444;float: left;margin-bottom: 20px;}
+            }
+            li:nth-child(1) {border-bottom: 1px solid #777; }
+            li:nth-child(2) {border-bottom: 1px solid #777; }
+            li:nth-child(odd){ margin-right: 4%;}
+        }
+        >a {
+            display: block;text-align: center;width: 200px;height: 40px; font: 16px/40px 'arial'; color: #666;border: 1px solid #666; margin: 0 auto; margin-top: 40px;
+            &:hover {background: rgba(0,0,0,0.8); color: #fff;}
+        }
+
+    }
+}
+
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    #notice {
+        width: 90%; padding: 100px 0; margin: 0 auto;
+
+        .inner {
+            width: 100%; 
+            h1 {
+                font-size: 28px;
+                &::before {width: 180px;} 
+            }
+        }
+    }
+}
+
+
+/* mobile */
+@media screen and (max-width:$mobile){
+    #notice {
+        padding: 80px 0;
+
+        .inner {
+            h1 {
+                font-size: 24px;
+                &::before {width: 160px; height: 2px;} 
+            }
+            ul{
+                li {width: 100%; margin-top: 20px; padding-left: 10px; border-bottom: 1px solid #777; }
+                li:nth-child(4) { border-bottom: none;}
+                li:nth-child(odd){ margin-right: none;}
+            }
+        }
+    }
+}

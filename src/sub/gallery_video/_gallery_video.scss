@@ -1,0 +1,101 @@
+// visual
+#gallery_video_visual {
+    width: 100%; background:url('../img/video.jpg') no-repeat center center; background-size: cover;  position: relative; transition: 0.5s;
+
+    .inner {
+        width: 100%; height: 250px; 
+        h1 {position: absolute; left: 50%; top: 60%; transform: translate(-50%, -50%); font: 600 40px/1 'Barlow', sans-serif; color: #fff; text-shadow: 0px 0px 10px rgba(0,0,0,0.9);}
+
+    }
+}
+
+// content
+
+.gallery_video {
+    width: 100%; padding-bottom: 100px; 
+
+    .inner {
+        width: 1180px; margin: 0 auto;
+
+        .wrap {
+            width: 100%; 
+
+            &::after {
+                content:''; display: block; clear: both;
+            }
+
+            article {
+                width: 280px; float: left; margin-right: 20px; padding: 10px; box-sizing: border-box; border: 1px solid #aaa; margin-bottom: 30px; position: relative; height: 266px; transition: 0.5s;
+                
+                &:nth-of-type(4n) {margin-right: 0;}
+
+                img {
+                    width: 100%; margin-bottom: 20px; cursor: pointer;
+                }
+
+                h2 {
+                    margin-bottom: 20px; font: 600 15px/1.4 'Barlow', sans-serif; 
+                }
+                
+                span {
+                    position: absolute; left: 10px; bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    /* visual */
+    #gallery_visual .inner {height: 200px; }
+
+    // content
+    .gallery_video {
+        width: 100%; padding-bottom: 80px;
+        .inner {
+            width: 90%;
+
+            .wrap {
+                position: relative;
+                
+                article {
+                    width: 49%; margin-right: 2%;  height: auto;
+
+                    h2 {min-height: 43px;}
+
+                    &:nth-of-type(2n) {
+                        margin-right: 0;
+                    }
+
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+/* mobile */
+@media screen and (max-width:$mobile){
+
+     // content
+     .gallery_video {
+       
+        .inner {
+            .wrap {                
+                article {
+                    width: 100%; margin-right: 0%;  height: auto;
+
+                    h2 {min-height:auto;}
+
+                  
+                }
+            }
+        }
+    }
+
+}

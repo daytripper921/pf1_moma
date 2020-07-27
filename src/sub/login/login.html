@@ -1,0 +1,44 @@
+<include src="../header/header.html"></include>
+
+
+    <!-- visual -->
+    <figure id="login_visual">
+        <div class="inner">
+            <h1>Log In</h1>
+        </div>
+    </figure>
+
+    <!-- content -->
+    <section class="content login">
+        <div class="inner">
+            
+            <h1>Log In<span>로그인</span></h1>
+
+            <div class="wrap">
+                <form action="/" method="POST" id="join">
+                    <fieldset>
+                        <legend class="hidden">로그인</legend>
+
+                        <div class="int">
+                            <input type="text" name="id" id="id" autocomplete="off" required>
+                            <label for="id">USER NAME</label>
+                        </div>
+                        <div class="int">
+                            <input type="text" name="pw" id="pw" autocomplete="off" required>
+                            <label for="pw">PASSWORD</label>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">LOG IN</button>
+                        </div>
+                        <div class="caption">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/sub/login/login.js"></script>
+
+<include src="../footer/footer.html"></include>

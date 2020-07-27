@@ -1,0 +1,38 @@
+<include src="../header/header.html"></include>
+
+
+
+    <!-- visual -->
+    <figure id="location_visual">
+        <div class="inner">
+            <h1>LOCATION</h1>
+        </div>
+    </figure>
+
+    <!-- content -->
+    <section class="content location">
+        <div class="inner">
+            <h1>Location<span>오시는 길</span></h1>
+
+            <div id="map"></div>
+
+            <div class="wrap">
+                <ul id="traffic">
+                    <li id="t_on">교통정보량 보기</li>
+                    <li id="t_off" class="on">교통정보량 숨기기</li>
+                </ul>
+
+                <ul id="branch">
+                    <li id="branch1" class="on">본점</li>
+                    <li id="branch2">종로점</li>
+                    <li id="branch3">이태원점</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7cc7f782d99e1cf25bd3a43d2be6b281"></script>
+    <script src="js/sub/location/location.js"></script>
+
+<include src="../footer/footer.html"></include>

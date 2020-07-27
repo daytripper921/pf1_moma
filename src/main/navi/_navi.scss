@@ -1,0 +1,19 @@
+#navi {
+    position: fixed; right: 30px; top: 50%; transform: translateY(-50%);z-index: 300;
+
+    li a {
+        display: block; 
+        width: 12px; height: 12px; background: #fff; margin-bottom: 10px;border: 1px solid #222; box-sizing: border-box; transition: 0.3s;
+
+        &.on {
+            background: #222; height: 45px;
+        }
+    }
+}
+
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    #navi {display: none;}
+}
+

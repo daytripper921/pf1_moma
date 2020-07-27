@@ -1,0 +1,117 @@
+@charset "utf-8";
+$tablet : 1179px;
+$mobile : 639px;
+
+//reset
+* {margin:0px; padding:0px;}
+ul,ol,li {list-style:none;}
+a {text-decoration:none; color:#555;}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Roboto&display=swap');
+
+//main
+@import "main/header/header";
+@import "main/visual/visual";
+@import "main/business/business";
+@import "main/tab/tab";
+@import "main/archive/archive";
+@import "main/banner/banner";
+@import "main/more/more";
+@import "main/news/news";
+@import "main/service/service";
+@import "main/notice/notice";
+@import "main/collection/collection";
+@import "main/navi/navi";
+@import "main/footer/footer";
+
+//sub
+@import "sub/header/reset";
+@import "sub/header/header";
+@import "sub/footer/footer";
+@import "sub/department/department";
+@import "sub/location/location";
+@import "sub/community/community";
+@import "sub/gallery/gallery";
+@import "sub/gallery_video/gallery_video";
+@import "sub/signup/signup";
+@import "sub/login/login";
+@import "sub/donation/donation";
+
+// main page common transition
+.main {
+    &.on {
+        .inner {
+            h1 {transform: translateX(0); opacity: 1;}
+            .wrap {opacity: 1;}
+        }
+    }
+    .inner {
+        
+        h1 {
+            transform: translateX(-200px); opacity: 0; transition: 0.5s;
+        }
+
+        .wrap {
+            opacity:0; transition: 0.5s;
+        }
+    }
+}
+
+
+//sub common layout
+
+/* content */
+.content {
+    width: 100%;
+
+    .inner {
+        width: 1180px; margin: 0 auto; padding: 150px 0; box-sizing: border-box; transition: 0.5s; min-height: 500px; position: relative;
+    
+        h1 {
+            font: 30px/1 'Barlow', sans-serif; color: #555; letter-spacing: 1px; display: inline-block; margin-bottom: 50px;
+
+            &::before {
+                content:''; display: inline-block; width: 3px; height: 23px; background: #2d4553; margin-right: 10px;
+            }
+
+            // &::after {content:''; display: block; width: 60px; height: 2px; background: #888; margin-top: 14px; margin-bottom: 40px; margin-left: 5px;}
+
+            span {
+                font: 14px/1 '맑은고딕'; color: #888;letter-spacing: 1px; margin-left: 10px;
+                &::before {color: #888; content:'/'; margin-right: 15px;}
+            }
+        }             
+    }
+}
+
+/* tablet */
+@media screen and (max-width:$tablet){
+   
+
+     /* content */
+     .content {
+        .inner {
+            width: 90%; padding: 100px 0;
+            h1 {font-size: 26px;} 
+        }
+     }
+
+
+}
+
+
+/* mobile */
+@media screen and (max-width:$mobile){
+
+    .content {
+        .inner {
+            h1 {
+                &::after { margin-top: 0px;}
+                span {
+                    display: block; margin-top: 10px; margin-bottom: 20px; margin-left: 0;
+                    &::before {content:''; margin-right: 0;}
+                }
+            }
+        }
+    }
+}

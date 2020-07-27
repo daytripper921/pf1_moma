@@ -1,0 +1,180 @@
+
+/* visual */
+#gallery_visual {
+    width: 100%; background:url('../img/gallery.jpg') no-repeat center center; background-size: cover;  position: relative; transition: 0.5s;
+
+    .inner {
+        width: 100%; height: 250px; 
+        h1 {position: absolute; left: 50%; top: 60%; transform: translate(-50%, -50%); font: 600 40px/1 'Barlow', sans-serif; color: #fff; text-shadow: 0px 0px 10px rgba(0,0,0,0.9);}
+
+    }
+}
+    
+
+/* content */
+
+.gallery {
+    width: 100%; background:#dddad59c; padding-bottom: 100px;
+    .inner {
+        width: 1180px; position: relative; 
+        
+        .wrap {
+            width: 100%;  transform:translateY(100px); opacity:0;
+
+            &.on {
+                transform:translateY(0px); opacity:1; transition:1s;
+            }
+
+            ul {
+                width: 100%; margin-bottom: 50px;
+
+                &::after {content:''; display: block; clear: both;}
+
+                li {
+                    width: 25%; box-sizing: border-box; padding: 10px; margin-bottom: 20px;
+                    float: left; 
+
+                    div {
+                        background: #fff; padding: 20px; box-sizing: border-box;
+                        border-radius: 8px;
+                        // &:nth-of-type(4n) {margin-right: 0;}
+
+                        a {
+                            >img {width: 100%;}
+                        }
+                    }
+                }
+            }
+        }
+
+       
+
+            #search {
+                width: 50%; position: absolute;  bottom: 100px; left: 50%; transform: translateX(-50%); padding-top: 100px;
+                 box-sizing: border-box; height: 40px; margin-bottom: 20px;
+
+                input[type=text] {
+                    width: 80%; height: 40px; border: 1px solid #999; padding: 5px 10px; box-sizing: border-box; margin-top: -4px; margin-right: 2%;
+                }
+
+                button {
+                    width: 17%; height: 40px; background :#999; color: #fff; font:  14px/40px 'arial'; text-align: center; border: none;
+                }
+            }
+
+            
+            .paging {
+                position: absolute;  bottom: 10px; left: 50%; transform:  translateX(-50%);  width: 40%;
+                box-sizing: border-box; height: 40px; display: flex; justify-content: space-between; align-items: center;
+
+                &::after {
+                    content:''; display: block; clear: both;
+                }
+
+                a{
+                    display: inline-block;  width: 30px; height: 30px; border: 1px solid #aaa; font: 12px/30px 'Roboto', sans-serif; color: #888; transition: 0.3s; text-align: center; background: #eee; color: #444; 
+                    
+                    &.on {font-weight: bold; background: #333; color: #fff;}
+                }
+
+            }
+    
+
+    }
+}
+
+.bigImg {
+    width:100%; height: 100%; padding: 50px; box-sizing:border-box; background:rgba(0,0,0,0.8); position:fixed; top: 0; left: 0; display: none; z-index: 800;
+
+    >img {width: 100%; height: 100%; object-fit: contain;}
+    >span {font-size: 14px; color: #fff; position: absolute; top: 20px; right: 20px; cursor: pointer;}
+
+}
+
+
+
+
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    
+    /* visual */
+    #gallery_visual .inner {height: 200px; }
+
+    // content
+
+    .gallery {
+        width: 100%; padding-bottom: 200px;
+        .inner {
+            width: 90%; 
+            
+            .wrap {
+                ul {
+    
+                    li {
+                        width: 33.3333%; 
+    
+                    
+                    }
+                }
+            }
+    
+            #search {
+                width: 50%; bottom: 100px;
+    
+                input[type=text] {
+                    width: 100%; margin-top: 0; margin-right:0; margin-bottom: 20px;
+                }
+    
+                button {
+                    width: 100%; 
+                }
+            }
+
+            
+           .paging {
+                width: 50%; bottom: -50px;
+
+
+            } 
+
+        }
+    }
+    
+
+}
+
+
+/* mobile */
+@media screen and (max-width:$mobile){
+    
+    /* content */
+  
+    .gallery {
+
+        .inner {
+            padding-bottom: 150px;
+            .wrap {
+                ul {
+   
+                    li {
+                        width: 100%; 
+    
+                    }
+                }
+            }
+    
+            #search {
+                width: 90%; 
+    
+            }
+
+            .paging {
+                width: 90%; bottom: -80px;
+
+
+            }
+        }
+    }
+   
+}

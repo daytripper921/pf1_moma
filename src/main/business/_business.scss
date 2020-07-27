@@ -1,0 +1,224 @@
+#business {
+    width: 100%; margin: 0 auto; background: #fff; padding: 150px 0; background: transparent;
+
+    .inner {
+        width: 1180px; margin: 0 auto; position: relative;
+    
+        &::before {content:''; display: block; width: 1px; height: 2614px; position: absolute; left: -40px; top: -150px; background: #ccc;  z-index: -2;}
+    
+        h1 {
+            font: 500 34px/1 'Barlow', sans-serif; color: #333;  margin-bottom: 50px; position: relative; padding-bottom: 5px; transition: all 0.5s;
+        
+            &::before {content:''; display: block; width: 300px; height: 2.5px; position: absolute; left: 0px; bottom:0px; background: #ccc; transition: all 0.5s;} 
+        }
+
+        .wrap {
+            width: 100%; margin: 0 auto;  overflow: hidden;
+            &::after {content:''; display: block; clear: both;}
+
+            article {
+                width: 295px; float: left; background: #4d5b64; height: 290px; padding: 20px; box-sizing: border-box; position: relative; cursor : pointer; transition: 0.3s;
+
+                
+                &:nth-of-type(2n) {background: #f2efeb;}
+
+                // 화살표
+                >button {
+                    position: absolute; width: 50px; top: 70%; left: 20px; background: transparent; border:0; border-top: 1px solid #fff;  z-index: 5;
+                
+                    &::before{ content:''; position: absolute; width: 15px; top: -1px; right: 0px; border-top: 1px solid #fff; transform: rotate(45deg); transform-origin: right;}
+                    &::after{ content:''; position: absolute; width: 15px; top: -1px; right:0px; border-top: 1px solid #fff; transform: rotate(45deg); transform-origin: right;  }
+                }
+
+                &:hover>button{transform: translateX(30px); transition: all .5s ease;}
+                &:hover>button::after{transform: rotate(-45deg); transition: all .4s .5s ease;}
+                // ??  #business .inner .wrap article.white>button {border-top: 1px solid #4d5b64;;}
+
+                h2 {
+                    margin-bottom: 15px; font: 500 18px/1.2 'Barlow', sans-serif; color: #fff; z-index: 5;
+                    >span {display: block;font: 18px/1.2 'Roboto', sans-serif; color: #fff; z-index: 5;}
+                }
+
+                p>span {font: 12px/1.4 'Roboto', sans-serif; color: #ddd; display: block; z-index: 5;}
+
+
+                &:nth-of-type(1) {
+                    background: #fff; 
+
+                    h2>span {color: #333;}
+                    p>span {color: #666;}
+                    &::before {
+                        content:''; display: block; width: 100%;height: 100%;
+                        background: url('../img/moma4.jpg') no-repeat center top; background-size: cover; position: absolute; top: 0;left: 0; 
+                    opacity: 1; transition: 0.3s;
+                    }
+                    &:hover::before{
+                        opacity:0.1;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    
+                    >h2 { color:#4d5b64;}
+                    >p>span {color:#999;}
+
+                    &:hover {
+                        background: url('../img/modigliani.jpg') no-repeat center top; background-size: cover; 
+                        h2 {color: #fff; z-index: 10;}
+                        > p > span {color: #fff; z-index: 10;}
+                    }
+                }
+                &:nth-of-type(3) {
+                    width: 590px; position: relative; transform: translate(100px,0); opacity: 0; transition-delay: 0.1s;
+                
+                    >.txt{display: block; width: 120px; height: 30px; border: 1px solid #fff; padding-left: 10px; margin-bottom: 10px;font: 11px/30px 'Roboto', sans-serif; color: #fff;  margin-top: 20px; letter-spacing: 1px; }
+                    >button { top:80%; left: 500px; }
+                    &:hover {background: url('../img/judd.jpg') no-repeat center bottom; background-size: cover;}
+                }
+
+                
+                &:nth-of-type(4){
+                    background: url('../img/giac1.jpg') no-repeat center top; background-size: cover; transform: translate(0px,100px); opacity: 0; transition-delay: 0.3s;
+                
+                    p>span {opacity: 0; }
+                    &:hover {
+                        background: #f2efeb;
+                        h2 {color: #4d5b64;}
+                        p>span {opacity: 1; color: #555;}
+                        }
+                    >.txt{display: block; width: 50%; height: 30px; border: 1px solid #fff; padding-left: 10px; position: absolute; left: 10%; bottom: 40px; font: 11px/30px 'Roboto', sans-serif; color: #fff;letter-spacing: 1px;}
+                    >button{ top: 45%;}
+                    h2 {color:#4d5b64;}
+                }
+
+                &:nth-of-type(5){
+
+                    &:hover {background: url('../img/andywarhol.jpg') no-repeat center top; background-size: cover;}
+                }
+
+                &:nth-of-type(6){
+                    h2{ color:#4d5b64;}
+                    >p>span {color:#999;}
+
+                    &:hover {
+                        background: url('../img/lange.jpg') no-repeat center top; background-size: cover;
+                        h2 {color: #fff; z-index: 10;}
+                        > p > span {color: #fff; z-index: 10;}
+                    }
+                }
+
+                &:nth-of-type(7) {
+                    background: #fff; 
+                    h2 {color: #333;}
+                    p>span {color: #666;}
+                    &::before {
+                        content:''; display: block; width: 100%;height: 100%;
+                        background: url('../img/moma2.jpg') no-repeat center top; background-size: cover; position: absolute; top: 0;left: 0; 
+                    opacity: 1; transition: 0.3s;
+                    }
+                    &:hover::before{
+                        opacity:0.1;
+                    }
+                }
+                
+                
+
+            }
+            .white>button {
+                border-top: 1px solid #4d5b64;
+            
+                &::before {border-top: 1px solid #4d5b64;}
+                &::after {border-top: 1px solid #4d5b64;}
+            }
+            .dark{
+                &::after {content:''; display: block; width: 100%; height: 100%; background:rgba(0,0,0,0.5); position: absolute; top: 0; left: 0; opacity: 0; transition: .5s;}
+                &:hover::after {opacity: 0.5; z-index:4;}
+            }
+        }
+    }
+
+    &.on {
+        .inner .wrap article {
+            transform: translate(0,0); opacity:1;
+
+        }
+    }
+}
+
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    #business {
+        width: 100%; padding: 100px 0;
+        .inner {
+            width: 90%; 
+
+            &::before {display: none;}
+            h1{
+                font-size: 28px;
+                &::before {width: 250px;}
+            }
+            
+            .wrap {
+                article {
+                    width: 25%; height: 220px; padding: 20px; 
+                    >button { 
+                        width: 40px; 
+                        &::before{  width: 15px; }
+                        &::after{width: 15px;}
+                    }
+                    h2 { 
+                        font-size: 16px;
+                        >span {display: block; font-size: 16px; }
+                    }
+                    p>span {display: none;}
+                }
+
+                article:nth-child(3) {
+                    width: 50%;
+                    >.txt{ width: 90px; height: 30px; border: 1px solid #fff; padding-left: 10px; margin-bottom: 10px;font: 11px/30px 'arial'; color: #fff; position: relative;}
+                    >button { top:80%; left:20px; }
+                }
+
+                article:nth-child(4){
+                    box-sizing: border-box;
+                    >.txt{width: 80%; margin: 0 auto; box-sizing: border-box;}
+                    >button{ top: 35%;}
+                }
+            }
+        }
+    
+    }
+}
+
+
+/* mobile */
+@media screen and (max-width:$mobile){
+    #business { 
+        padding: 80px 0;
+        
+        .inner{
+            &::before {display: none;}
+            h1 { 
+                font-size: 24px;
+                &::before {width: 230px;}
+            }
+
+            .wrap{
+                article {width: 50%; height: 170px;}
+                article:nth-child(3) {
+                    width: 100%;
+                    &:hover {background: url('../img/judd.jpg') no-repeat center; background-size: cover;}
+                    >.txt{display: block; margin-bottom: 0px; float: left; margin-right: 20px;}
+                }
+                article:nth-child(4){
+                    >.txt{width: 80%; left: 20px;bottom:30px;}
+                    >button {display: none;}
+                }
+                article:nth-child(5){
+                    &:hover {background: url('../img/andywarhol2.jpg') no-repeat center; background-size: cover;}
+                }
+            }
+        }
+    }
+}

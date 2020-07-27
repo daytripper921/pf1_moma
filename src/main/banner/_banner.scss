@@ -1,0 +1,62 @@
+#banner {
+    width: 100%; padding: 50px 0 150px;
+    .inner {
+        width: 100%; margin: 0 auto; background: #4d5b64; z-index: 2;
+    
+        .wrap {
+            &::after {content:''; display: block; clear: both;}
+            > div {float: left; width: 100%;}
+            .left {
+                height: 300px; width: 50%; padding: 20px; box-sizing: border-box; position: relative;
+                .text {
+                    width: 400px;position: absolute; right: 10%; top: 50%; transform: translateY(-50%);
+                    h1 {font: 500 24px/1 'Barlow', sans-serif; color: #fff; margin-bottom: 10px;}
+                    p {font: 14px/1.4 'Barlow', sans-serif; color: #ddd; margin-bottom: 20px;}
+                    ul{font: 12px/1 'Roboto', sans-serif; color: #ccc;}
+                    li {margin-bottom: 10px; margin-left: 10px;}
+                }
+            }
+            .right {height:  300px; width: 50%; background: url('../img/picasso2.png') no-repeat center; background-size: cover;}
+        }
+    }
+}
+
+
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    #banner {
+        .inner {
+            .wrap {
+                >.left {
+                    .text{
+                        width: 300px; right: 10%;
+                        h1 {font-size: 20px;}
+                        p {font-size: 14px;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* mobile */
+@media screen and (max-width:$mobile){
+    #banner {
+        .inner {
+            .wrap {
+                background: url('../img/index/picasso2.png') no-repeat center; background-size: cover; width: 100%;
+
+                >.left {
+                    height: 300px; width: 100%; padding: 0px; margin: 0 auto; position: relative;
+                    .text{
+                        width: 400px; position: absolute; left:50%; top: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.3); padding: 20px;
+                    }
+                }
+
+                >.right {display: none;}
+            }
+        }
+    }
+}

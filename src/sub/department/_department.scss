@@ -1,0 +1,106 @@
+
+/* visual */
+#department_visual {
+    width: 100%; background:url('../img/department.jpg') no-repeat center center; background-size: cover;  position: relative; transition: 0.5s;
+
+    .inner {
+        width: 100%; height: 250px; 
+        h1 {position: absolute; left: 50%; top: 60%; transform: translate(-50%, -50%); font: 600 40px/1 'Barlow', sans-serif; color: #fff; text-shadow: 0px 0px 10px rgba(0,0,0,0.9);}
+    }
+}
+    
+// content
+.department {
+    .inner {
+        .division {
+            width: 100%; height: 70VH; background: url('../img/org.jpg') no-repeat center top; background-size: contain;
+
+            ul{
+                position: absolute; top: -1000px; left: 0; opacity: 0;
+            }
+        }
+    }
+}
+
+/* ------tablet-------- */
+@media screen and (max-width:$tablet){  
+    $ht : 50px;
+    $gap : 20px;
+        
+    .department {
+        .inner {
+            .division {
+                height: auto; background: url('../img/sub/org.jpg') no-repeat center -9999px; 
+
+                ul{
+                    position: relative; top: 0px; left: 0; opacity: 1;
+                    //1depth
+                    li {
+                        span {
+                            display: block; width: 35%; height: $ht;
+                            background: #222; font-weight: bold; font-size :16px; line-height: $ht; font-family: '맑은고딕'; color: #fff; text-align: center; margin-bottom: $gap; position: relative;
+
+                            &::after {
+                                content:''; display: block; width: 1px; background: #aaa; position: absolute; left: 30px; top: $ht; height: (($ht + $gap) * 3) - ($ht/2);
+                            }
+                        }
+                        //2depth
+                        ul {
+                            li {
+                                span {
+                                    background: #2d4553; transform: translateX(50px); 
+
+                                    &::before {
+                                        content: ''; display: block; width: 20px; height: 1px; background: #aaa; position: absolute; top: $ht/2; left: -20px;
+                                    }
+                                }
+
+                                &:nth-of-type(1) span::after {display: none;}
+                                &:nth-of-type(2) span::after {display: none;}
+                                &:nth-of-type(3) span::after {height: (($ht + $gap) * 12) - ($ht/2);}
+
+                                //3depth
+                                ul {
+                                    li{
+                                        span {
+                                            background: #f3eee7; transform: translateX(100px); color: #333;
+                                        }
+
+                                        &:nth-of-type(1) span::after {display: block; height: (($ht + $gap) * 2) - ($ht/2);}
+                                        &:nth-of-type(2) span::after {display: block; height: (($ht + $gap) * 3) - ($ht/2);}
+                                        &:nth-of-type(3) span::after {display: block; height: (($ht + $gap) * 3) - ($ht/2);}
+                                        &:nth-of-type(4) span::after {display: block; height: (($ht + $gap) * 4) - ($ht/2);}
+
+                                        //4depth
+                                        ul{
+                                            li {
+                                                span {
+                                                    background: #ddd;
+                                                    transform: translateX(150px);
+                                                    
+
+                                                   
+                                                }
+
+                                                &:nth-of-type(1) span::after { display: none;}
+                                                &:nth-of-type(2) span::after { display: none;}
+                                                &:nth-of-type(3) span::after { display: none;}
+                                                &:nth-of-type(4) span::after { display: none;}
+
+                                            }
+                                        }                                    
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ------mobile-------- */
+@media screen and (max-width:$mobile){  
+    
+}

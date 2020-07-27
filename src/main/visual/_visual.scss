@@ -1,0 +1,27 @@
+#visual {
+    width: 100%; background: #555; height: 100vh; z-index:1; overflow: hidden; background: url('../img/moma1.jpg') no-repeat center top; background-size: cover; position: relative;
+
+    .inner {
+        width: 100%; 
+    
+        h1 {
+            position: absolute; font: 37px/1 'Barlow', sans-serif; color: #fff; top: 20%; left: 20%;  padding-left: 10px; transition: all 0.5s;
+        
+            span {font: 500 37px/1 'Barlow', sans-serif; color: #fff;display: block; margin-left: 150px;}
+
+            &::before {content:''; display: block; width: 3px; height: 100%; background: #fff; position: absolute; top: 0; left: 0; }
+        }
+    }
+}
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    #visual .inner h1 { top: 10%; left: 10%; }
+}
+
+
+/* mobile */
+@media screen and (max-width:$mobile){
+    #visual .inner h1 { padding-bottom: 5px;}
+    #visual .inner h1::before {content:''; display: block; width: 250px; height: 2px; position: absolute; top: 100%; left: 27%;}
+}
