@@ -29,13 +29,18 @@ $(document).ready(function(){
     })
 
     $('#gnbMo>ul>li>a').on('click', function(){
+        var opened = $(this).hasClass('on');
 
         //패널 비활성화
         $('#gnbMo>ul>li>a').removeClass('on');
         $('#gnbMo>ul>li>ul').slideUp();
 
-        $(this).addClass('on');
-        $(this).next('ul').slideDown();
+        if(opened){
+           $(this).removeClass('on');
+        } else {
+            $(this).addClass('on');
+            $(this).next('ul').slideDown();
+        }
     });
 
 
@@ -44,6 +49,9 @@ $(document).ready(function(){
         let wid = $(window).width();
 
         if(wid>=1180){
+
+            $('#sub_header').off('mouseenter');
+            $('#sub_header').off('mouseleave');
                     
             //header
             $('#sub_header').on('mouseenter', openSub);

@@ -49,35 +49,35 @@
 
        
 
-            #search {
-                width: 50%; position: absolute;  bottom: 100px; left: 50%; transform: translateX(-50%); padding-top: 100px;
-                 box-sizing: border-box; height: 40px; margin-bottom: 20px;
+        #search {
+            width: 50%; position: absolute;  bottom: 100px; left: 50%; transform: translateX(-50%); padding-top: 100px;
+                box-sizing: border-box; height: 40px; margin-bottom: 20px;
 
-                input[type=text] {
-                    width: 80%; height: 40px; border: 1px solid #999; padding: 5px 10px; box-sizing: border-box; margin-top: -4px; margin-right: 2%;
-                }
-
-                button {
-                    width: 17%; height: 40px; background :#999; color: #fff; font:  14px/40px 'arial'; text-align: center; border: none;
-                }
+            input[type=text] {
+                width: 80%; height: 40px; border: 1px solid #999; padding: 5px 10px; box-sizing: border-box; margin-top: -4px; margin-right: 2%;
             }
 
-            
-            .paging {
-                position: absolute;  bottom: 10px; left: 50%; transform:  translateX(-50%);  width: 40%;
-                box-sizing: border-box; height: 40px; display: flex; justify-content: space-between; align-items: center;
-
-                &::after {
-                    content:''; display: block; clear: both;
-                }
-
-                a{
-                    display: inline-block;  width: 30px; height: 30px; border: 1px solid #aaa; font: 12px/30px 'Roboto', sans-serif; color: #888; transition: 0.3s; text-align: center; background: #eee; color: #444; 
-                    
-                    &.on {font-weight: bold; background: #333; color: #fff;}
-                }
-
+            button {
+                width: 17%; height: 40px; background :#999; color: #fff; font:  14px/40px 'arial'; text-align: center; border: none;
             }
+        }
+
+        
+        .paging {
+            position: absolute;  bottom: 10px; left: 50%; transform:  translateX(-50%);  width: 40%;
+            box-sizing: border-box; height: 40px; display: flex; justify-content: space-between; align-items: center;
+
+            &::after {
+                content:''; display: block; clear: both;
+            }
+
+            a{
+                display: inline-block;  width: 30px; height: 30px; border: 1px solid #aaa; font: 12px/30px 'Roboto', sans-serif; color: #888; transition: 0.3s; text-align: center; background: #eee; color: #444; 
+                
+                &.on {font-weight: bold; background: #333; color: #fff;}
+            }
+
+        }
     
 
     }
