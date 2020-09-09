@@ -5,7 +5,7 @@ $(document).ready(function(){
    let $tab = $('#tab').offset().top ;
    let $archive = $('#archive').offset().top ;
    let $more = $('#more').offset().top ;
-   let $news = $('#news').offset().top ;
+   let $review = $('#review').offset().top ;
    let $service = $('#service').offset().top ;
    let $notice = $('#notice').offset().top ;
    let $collection = $('#collection').offset().top ;
@@ -37,10 +37,10 @@ $(document).ready(function(){
             $('#navi li a').eq(4).addClass('on');
             $('#more').addClass('on');
         }
-        if($(this).scrollTop() > $news - $offset ) {
+        if($(this).scrollTop() > $review - $offset ) {
             $('#navi li a').removeClass('on');
             $('#navi li a').eq(5).addClass('on');
-            $('#news').addClass('on');
+            $('#review').addClass('on');
         }
         if($(this).scrollTop() > $service - $offset ) {
             $('#navi li a').removeClass('on');

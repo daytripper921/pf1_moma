@@ -14,6 +14,7 @@
 
 .location {
     padding: 0 0 100px 0;
+
     .inner {
         #map {
             width:100%; height:500px; background:#000;
@@ -24,23 +25,22 @@
             content:''; display: block; clear: both;
 
             #traffic{
-                margin-top:40px; float: left;
+                margin-top:20px; float: left;
 
                 &::after {
                     content:''; display: block; clear: both;
                 }
                 >li {
-                    width:150px; height:40px; background:#fff; border: 1px solid #333; color:#444;
-                    font:500 12px/40px 'Noto Sans KR', sans-serif;  text-align:center;
-                    float:left; margin-right:10px; cursor:pointer;
+                    font:500 12px/1 'Noto Sans KR', sans-serif; color: #999;
+                    float: left; margin-right:10px; cursor:pointer;
 
-                    &:hover {background: #333; color: #fff; font-size: 13px;}
-                    &.on {background: #333; color: #fff; font-size: 13px;}
+                    &:hover {color: #888;}
+                    &.on {text-decoration: underline; color: #666;}
                 }
             }
 
             #branch {
-                margin-top:40px; float:right; 
+                margin-top:20px; float:right; 
 
                 &::after {
                     content:''; display: block; clear: both;
@@ -49,6 +49,8 @@
                     width:200px; height:40px; background:#fff; border: 1px solid #333; color:#444;
                     font: 500 12px/40px 'Noto Sans KR', sans-serif; text-align:center;
                     float:left; margin-right:10px; cursor:pointer;
+
+                    &:last-child {margin-right: 0;}
 
                     &:hover {background: #333; color: #fff; font-size: 13px;}
                     &.on {background: #333; color: #fff; font-size: 13px;}
@@ -80,22 +82,14 @@
 
             .wrap {
 
-                #traffic{
-                    margin-top:20px; 
-
-                    > li {width: 120px; float: none;}
-                    > li:nth-child(2) {margin-top: 10px;}
-                }
-
                 #branch {
                     margin-top:20px; 
 
                     &::after {
                         content:''; display: block; clear: both;
                     }
-
                     >li {
-                        width:130px; margin-top: 25px;
+                        width:100px; 
                     }
                 }       
             }
@@ -115,17 +109,10 @@
             }
 
             .wrap {
-
-                #traffic{                   
-                    > li {width: 130px; float: left;}
-                    > li:nth-child(2) {margin-top: 0px;}
-                }
-
                 #branch {
-                    float: left;
-                
+                    width: 100%; box-sizing: border-box;
                     >li {
-                        margin-top: 0px; margin-bottom: 20px;
+                        margin-bottom: 20px; width: 33.3333%; width: calc((100% - 20px) / 3); box-sizing: border-box;
                     }
                 }       
             }

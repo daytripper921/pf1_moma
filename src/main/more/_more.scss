@@ -7,7 +7,7 @@
         &::before {content:'MoMA'; display: block; font: bolder 120px/1 'arial', sans-serif; color: #000; position: absolute; left: 0; right: 0; transform: translate(-800px,1000px) rotate(90deg); }
    
         h1 {
-            font: 500 34px/1 'Barlow', sans-serif; color: #333; text-align: left; margin-bottom: 100px; position: relative; padding-bottom: 5px;
+            font: 500 34px/1 'Barlow', sans-serif; color: #2d4553; text-align: left; margin-bottom: 100px; position: relative; padding-bottom: 5px;
             &::before {content:''; display: block; width: 480px; height: 2.5px; position: absolute; left: 0px; bottom:0px; background: #ccc; transition: all 0.5s;} 
         }
         .wrap {
