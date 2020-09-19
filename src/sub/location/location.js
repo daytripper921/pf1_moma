@@ -25,7 +25,7 @@ window.onload = function () {
             latlng: new daum.maps.LatLng(37.5715, 126.9890588),
             imgSrc: './img/pin.png',
             imgSize: new daum.maps.Size(40, 40),
-            imgPos: { offset: new kakao.maps.Point(0, 0) },
+            imgPos: { offset: new kakao.maps.Point(15, 20) },
             button: document.getElementById('branch2')
         },
         {
@@ -101,12 +101,12 @@ window.onload = function () {
     $('#traffic>li').on('click', function(){
         $('#traffic > li').removeClass('on');
         $(this).addClass('on');
-    })
+    });
 
     $('#branch>li').on('click', function(){
         $('#branch>li').removeClass('on');
         $(this).addClass('on');
-    })
+    });
 
 
 

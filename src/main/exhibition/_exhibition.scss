@@ -1,4 +1,4 @@
-#business {
+#exhibition {
     width: 100%; margin: 0 auto; background: #fff; padding: 150px 0; background: transparent;
 
     .inner {
@@ -148,7 +148,7 @@
 
 /* tablet */
 @media screen and (max-width:$tablet){
-    #business {
+    #exhibition {
         width: 100%; padding: 100px 0;
         .inner {
             width: 90%; 
@@ -194,7 +194,7 @@
 
 /* mobile */
 @media screen and (max-width:$mobile){
-    #business { 
+    #exhibition { 
         padding: 80px 0;
         
         .inner{

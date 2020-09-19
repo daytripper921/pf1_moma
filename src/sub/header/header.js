@@ -7,11 +7,11 @@ $(document).ready(function(){
     //skip_navi
     $('#skip_navi a').on('focusin', function(){
         $(this).addClass('on');
-    })
+    });
 
     $('#skip_navi a').on('focusout', function(){
         $(this).removeClass('on');
-    })
+    });
 
 
     //rwd header

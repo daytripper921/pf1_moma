@@ -9,26 +9,27 @@ $(document).ready(function(){
 
     call_data(url_search, key, page_num, per_page, tags);
 
-    //search
+    //search btn
     $('.btnSearch').on('click', function(){
 
         tags = $('#keyword').val();
         page_num = 1;
 
-        $('.paging a').removeClass('on');
-        $('.paging a').eq(0).addClass('on');
+        $('.pagenation a').removeClass('on');
+        $('.pagenation a').eq(0).addClass('on');
 
         call_data(url_search, key, page_num, per_page, tags);
     });
 
+    //enter key
     $('#keyword').on('keydown', function(keyword){
         
         tags = $('#keyword').val();
         page_num = 1;
 
         if(keyword.keyCode == 13){
-            $('.paging a').removeClass('on');
-            $('.paging a').eq(0).addClass('on');
+            $('.pagenation a').removeClass('on');
+            $('.pagenation a').eq(0).addClass('on');
     
             call_data(url_search, key, page_num, per_page, tags);
             //$('#keyword').val('');
@@ -39,13 +40,13 @@ $(document).ready(function(){
 
 
     //pagenation
-    $('.paging a').on('click', function(){
+    $('.pagenation a').on('click', function(){
         
 
         page_num = $(this).index()+1;
         call_data(url_search, key, page_num, per_page, tags);
 
-        $('.paging a').removeClass('on');
+        $('.pagenation a').removeClass('on');
         $(this).addClass('on');
     });
 

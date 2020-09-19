@@ -92,7 +92,7 @@ $(document).ready(function(){
                     $('<iframe>')
                         .attr({
                             width : '100%',
-                            height : 600,
+                            height : 500,
                             src : 'https://www.youtube.com/embed/'+id,
                             frameborder : 0,
                             allowfullscreen : true

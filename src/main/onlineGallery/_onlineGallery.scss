@@ -1,12 +1,12 @@
 $imgs : (1:"tab_1.jpg", 2:"tab_2.jpg", 3:"tab_3.jpg" );
 
-#tab {
-    width:100%; padding:150px 0px; box-sizing:border-box; overflow:hidden;
+#onlineGallery {
+    width:100%; padding:150px 0px; box-sizing:border-box; overflow:hidden; 
 
     .inner {
         width:1180px; margin:0px auto;
         >span {
-            font: 600 20px/1 'Barlow', sans-serif; color: #6a96b1;
+            font: 600 20px/1 'Barlow', sans-serif; color: #6291adde; opacity: 0; transition: 0.5s;
         }
         
         h1 { 
@@ -96,12 +96,14 @@ $imgs : (1:"tab_1.jpg", 2:"tab_2.jpg", 3:"tab_3.jpg" );
             }
         }        
     }
+
+    &.on .inner > span {opacity: 1;}
 }
 
 
 /* tablet */
 @media screen and (max-width:$tablet){
-    #tab {
+    #onlineGallery {
         padding:100px 0px; 
     
         .inner {
@@ -125,7 +127,7 @@ $imgs : (1:"tab_1.jpg", 2:"tab_2.jpg", 3:"tab_3.jpg" );
 
 /* mobile */
 @media screen and (max-width:$mobile){
-    #tab {
+    #onlineGallery {
         padding:80px 0px; 
     
         .inner {

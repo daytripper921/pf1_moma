@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    let $tab = $('#tab');
+    let $tab = $('#onlineGallery');
     let $btn = $tab.find('.left li');
     let $photo = $tab.find('.photo li');
     let $txt = $tab.find('.txt li');

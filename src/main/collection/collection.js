@@ -17,9 +17,9 @@ $(document).ready(function(){
     function resizing(num){
         $('.arts ul').css({marginLeft : (-100/num)+'%'});
 
-        $('.col_prev, .col_next').off();
+        $('.colPrev, .colNext').off();
 
-        $('.col_prev').on('click', function(e){
+        $('.colPrev').on('click', function(e){
             e.preventDefault();
     
             $('.arts ul').animate({marginLeft : '0'}, 500, function(){
@@ -28,7 +28,7 @@ $(document).ready(function(){
             });
         });
     
-        $('.col_next').on('click', function(e){
+        $('.colNext').on('click', function(e){
             e.preventDefault();
     
             $('.arts ul').animate({marginLeft : (-100/num) * 2 +'%'}, 500, function(){
