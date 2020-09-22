@@ -108,9 +108,4 @@ $(document).ready(function(){
         document.cookie = name+'='+value+'; path=/; expires='+result+';'
         // today=done; path=/; expires=내일 날짜   <-  setCookie로 쿠키 생성됨
     }
-
-
-
-
-
 });

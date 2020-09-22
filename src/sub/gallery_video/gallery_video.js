@@ -16,10 +16,22 @@ $(document).ready(function(){
     //pop up deligation
     $('body').on('click', '.videos>article>img', function(){
         let vid_id = $(this).attr('data-vid');
-        create_pop(vid_id);
+        let wid = $(window).width();
+
+        if(wid > 1180){
+            create_pop(vid_id, '900px', 600);
+        } else if( wid > 640) {
+            create_pop(vid_id, '90%', 500);
+        } else {
+            create_pop(vid_id, '90%', 300);
+        }
+        
     });
 
     $('body').on('click', '.video_pop .close', function(){
+        remove_pop();
+    });
+    $(window).on('resize', function(){
         remove_pop();
     });
 
@@ -74,11 +86,11 @@ $(document).ready(function(){
 
         
     // 레이어 팝업
-    function create_pop(id){
+    function create_pop(id, vidWid, vidHt){
         $('body').append(
             $('<aside class="video_pop">')
                 .css({
-                    width: '90%',
+                    width: vidWid,
                     padding : 40,
                     boxSizing : 'border-box',
                     position : 'fixed',
@@ -92,7 +104,7 @@ $(document).ready(function(){
                     $('<iframe>')
                         .attr({
                             width : '100%',
-                            height : 500,
+                            height : vidHt,
                             src : 'https://www.youtube.com/embed/'+id,
                             frameborder : 0,
                             allowfullscreen : true
