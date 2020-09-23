@@ -9,7 +9,7 @@ $(document).ready(function(){
    let $service = $('#service').offset().top ;
    let $notice = $('#notice').offset().top ;
    let $collection = $('#collection').offset().top ;
-   let $offset = 300;
+   let $offset = 500;
 
    $(window).on('scroll', function(){
 
