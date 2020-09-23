@@ -13,36 +13,56 @@ $(document).ready(function(){
     $('.btnSearch').on('click', function(){
 
         tags = $('#keyword').val();
+
+        if (tags == 0){
+            alert('검색어를 입력해주세요.');
+            location.reload();
+        }
+
         page_num = 1;
 
         $('.pagenation a').removeClass('on');
         $('.pagenation a').eq(0).addClass('on');
 
         call_data(url_search, key, page_num, per_page, tags);
+        //$('#keyword').val('');
+        
+        setTimeout(function(){
+            $('body, html').animate({scrollTop : 0}, 10);
+        }, 1000);
     });
 
     //enter key
     $('#keyword').on('keydown', function(keyword){
         
         tags = $('#keyword').val();
+
         page_num = 1;
 
         if(keyword.keyCode == 13){
+
+            if (tags == 0){
+                alert('검색어를 입력해주세요.');
+                location.reload();
+            }
+
             $('.pagenation a').removeClass('on');
             $('.pagenation a').eq(0).addClass('on');
     
             call_data(url_search, key, page_num, per_page, tags);
             //$('#keyword').val('');
-        }
-       
 
-    })
+            setTimeout(function(){
+                $('body, html').animate({scrollTop : 0}, 10);
+            }, 1000);
+            
+        }
+    });
 
 
     //pagenation
     $('.pagenation a').on('click', function(){
         
-
         page_num = $(this).index()+1;
         call_data(url_search, key, page_num, per_page, tags);
 
