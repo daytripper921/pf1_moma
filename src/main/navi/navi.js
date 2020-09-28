@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
    let $visual = $('#visual').offset().top ;
-   let $business = $('#exhibition').offset().top ;
-   let $tab = $('#onlineGallery').offset().top ;
+   let $exhibition = $('#exhibition').offset().top ;
+   let $online = $('#onlineGallery').offset().top ;
    let $archive = $('#archive').offset().top ;
    let $more = $('#more').offset().top ;
    let $review = $('#review').offset().top ;
@@ -17,12 +17,12 @@ $(document).ready(function(){
             $('#navi li a').removeClass('on');
             $('#navi li a').eq(0).addClass('on');
         }
-       if($(this).scrollTop() > $business - $offset ) {
+       if($(this).scrollTop() > $exhibition - $offset ) {
             $('#navi li a').removeClass('on');
             $('#navi li a').eq(1).addClass('on');
             $('#exhibition').addClass('on');
         }
-        if($(this).scrollTop() > $tab - $offset ) {
+        if($(this).scrollTop() > $online - $offset ) {
             $('#navi li a').removeClass('on');
             $('#navi li a').eq(2).addClass('on');
             $('#onlineGallery').addClass('on');

@@ -27,11 +27,11 @@
                     }
 
                     .slideTxt2 {
-                        position: absolute; right: 50%; top: 70%;  text-align: right;
+                        position: absolute; right: 10%; top: 70%;  text-align: right;
                         p {
                             i {font-size: 40px; color: #fff;}
                             span {width: 45px; display: inline-block;}
-                            font: italic 25px/1.3 'Barlow'; color: #eee; margin-bottom: 20px; text-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+                            font: italic 25px/1.2 'Barlow'; color: #eee; margin-bottom: 20px; text-shadow: 5px 5px 10px rgba(0,0,0,0.4);
                         }
                         h2{
                             font: 500 italic 18px/1 'Barlow'; color: #bbb;text-shadow: 5px 5px 10px rgba(0,0,0,0.4);
@@ -64,7 +64,7 @@
             }
 
             .slideshowNav {
-                width: 100%; position: absolute; height: 100%;
+                width: 100%; position: absolute; height: 100%; 
 
                 a.visualPrev {
                     width: 40px; height: 40px; display: block; position: absolute; left: 10%; top: 50%; transform: translateY(-50%); 
@@ -123,7 +123,6 @@
                         }
     
                         .slideTxt2 {
-                            right: 10%; 
                             p {
                                 i {font-size: 30px;}
                                 span {width: 35px;}
@@ -183,21 +182,40 @@
                             }
                         }
     
-                        .slideTxt2 { top: 65%;
+                        .slideTxt2 { 
+                            top: 65%; width: 90%;  right: 5%;
                             p {
-                                i {font-size: 25px;}
-                                span {width: 30px;}
+                                font-size: 18px;
+                                i {font-size: 22px;}
+                                span {width: 25px;}
                             }
+                            h2{font-size: 16px;}
                         }
                         .slideTxt3 { 
-                            right: 15%;  padding: 15px; 
-                            h2 {font: 600 45px/1 'Barlow';text-align: right;}
-                            p {font: 15px/1 'Roboto';}
+                            right: 50%;  padding: 15px; top: 12%; transform: translateX(50%); width: 90%; box-sizing: border-box;
+                            h2 {font: 600 40px/1 'Barlow';text-align: right;}
+                            p {font: 15px/1 'Roboto'; margin-bottom: 0px;}
                             >div {
-                               height: 35px; line-height: 35px; width: 50%; margin-left: 50%;
+                               height: 30px; line-height: 30px; width: 50%; margin-left: 50%; font-size: 16px; display: none;
+                            }
+                        }
+
+                        .slideTxt4 {
+                            left: 50%; top: 15%; padding: 20px; text-align: center; transform: translateX(-50%);
+                            p {
+                                font: 18px/1 'Roboto'; 
+                            }
+                            h2 {
+                                font: 600 40px/1.3 'Barlow'; border-bottom: 4px solid #fff;
                             }
                         }
                     }
+                }
+            }
+
+            .indicator {    
+                a {
+                    width: 35px;
                 }
             }
         }
