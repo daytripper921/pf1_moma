@@ -6,7 +6,7 @@
     
         &::before {content:''; display: block; width: 1px; height: 2614px; position: absolute; left: -40px; top: -150px; background: #ccc;  z-index: -2;}
     
-        h1 {
+        >h2 {
             font: 500 34px/1 'Barlow', sans-serif; color: #2d4553;  margin-bottom: 50px; position: relative; padding-bottom: 5px; transition: all 0.5s;
         
             &::before {content:''; display: block; width: 300px; height: 2.5px; position: absolute; left: 0px; bottom:0px; background: #ccc; transition: all 0.5s;} 
@@ -154,7 +154,7 @@
             width: 90%; 
 
             &::before {display: none;}
-            h1{
+            h2{
                 font-size: 28px;
                 &::before {width: 250px;}
             }
@@ -199,7 +199,7 @@
         
         .inner{
             &::before {display: none;}
-            h1 { 
+            h2 { 
                 font-size: 24px;
                 &::before {width: 230px;}
             }

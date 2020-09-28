@@ -15,7 +15,10 @@
     padding: 0 0 100px 0;
 
     .inner {
-        iframe {margin-bottom: 20px;}
+        div {
+            margin: 0 auto;
+            iframe {width: 100%; margin-bottom: 20px;}
+        }
         dl {
             dt {
                 font: 700 18px/1 'Nanum Gothic'; color: #444; margin-bottom: 10px;

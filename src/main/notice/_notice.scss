@@ -4,7 +4,7 @@
     .inner {
         width: 1180px; margin: 0 auto;
     
-        h1 { 
+        h2 { 
             font: 500 34px/1 'Barlow', sans-serif; color: #2d4553; text-align: left; margin-bottom: 50px; position: relative; padding-bottom: 5px;
             &::before {content:''; display: block; width: 200px; height: 2.5px; position: absolute; left: 0px; bottom:0px; background: #ccc; transition: all 0.5s;} 
         }
@@ -37,7 +37,7 @@
 
         .inner {
             width: 100%; 
-            h1 {
+            h2 {
                 font-size: 28px;
                 &::before {width: 180px;} 
             }
@@ -52,7 +52,7 @@
         padding: 80px 0;
 
         .inner {
-            h1 {
+            h2 {
                 font-size: 24px;
                 &::before {width: 160px; height: 2px;} 
             }

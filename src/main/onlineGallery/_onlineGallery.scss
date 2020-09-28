@@ -9,7 +9,7 @@ $imgs : (1:"tab_1.jpg", 2:"tab_2.jpg", 3:"tab_3.jpg" );
             font: 600 20px/1 'Barlow', sans-serif; color: #6291adde; opacity: 0; transition: 0.5s;
         }
         
-        h1 { 
+        h2 { 
             font: 500 34px/1 'Barlow', sans-serif; color: #2d4553; text-align: left; margin-bottom: 50px; padding-bottom: 5px; position: relative; margin-top: 10px;
             &::before {content:''; display: block; width: 350px; height: 2.5px; position: absolute; left: 0px; bottom:0px; background: #ccc; transition: all 0.5s;} 
         }

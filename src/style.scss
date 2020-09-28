@@ -41,13 +41,13 @@ a {text-decoration:none; color:#555;}
 .main {
     &.on {
         .inner {
-            h1 {transform: translateX(0); opacity: 1;}
+            h2 {transform: translateX(0); opacity: 1;}
             .wrap {opacity: 1;}
         }
     }
     .inner {
         
-        h1 {
+        h2 {
             transform: translateX(-200px); opacity: 0; transition: 0.5s;
         }
 
@@ -67,8 +67,8 @@ a {text-decoration:none; color:#555;}
     .inner {
         width: 1180px; margin: 0 auto; padding: 150px 0; box-sizing: border-box; transition: 0.5s; min-height: 500px; position: relative;
     
-        h1 {
-            font: 30px/1 'Barlow', sans-serif; color: #555; letter-spacing: 1px; display: inline-block; margin-bottom: 50px;
+        >h2 {
+            font: 30px/1 'Barlow', sans-serif; color: #555; letter-spacing: 1px; display: inline-block; margin-bottom: 50px; width: 100%;
 
             &::before {
                 content:''; display: inline-block; width: 3px; height: 23px; background: #2d4553; margin-right: 10px;
@@ -92,7 +92,7 @@ a {text-decoration:none; color:#555;}
      .content {
         .inner {
             width: 90%; padding: 100px 0;
-            h1 {font-size: 26px;} 
+            h2 {font-size: 26px;} 
         }
      }
 
@@ -105,7 +105,7 @@ a {text-decoration:none; color:#555;}
 
     .content {
         .inner {
-            h1 {
+            h2 {
                 &::after { margin-top: 0px;}
                 span {
                     display: block; margin-top: 10px; margin-bottom: 20px; margin-left: 0;

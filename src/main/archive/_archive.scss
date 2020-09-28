@@ -11,7 +11,7 @@
 
     .inner {
         width: 1180px; margin: 0 auto; position: relative;
-        h1 {
+        h2 {
             font: 500 34px/1 'Barlow', sans-serif; color: #2d4553; margin-bottom: 50px; position: relative; padding-bottom: 5px; transition: all 0.5s;
             &::before {content:''; display: block; width: 230px; height: 2.5px; background: #ccc; position: absolute; left: 0; bottom: 0;} 
         }
@@ -61,7 +61,7 @@
 
         .inner { 
             width: 90%; 
-            h1 {
+            h2 {
                 font-size: 28px;
                 &::before {width: 200px;} 
             }
@@ -88,7 +88,7 @@
 
             > a {right: 0px;}
 
-            h1 {
+            h2 {
                 font-size: 24px;
                 &::before {width: 170px;} 
             }
