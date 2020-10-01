@@ -21,8 +21,8 @@
                 float: left; width: 280px; margin-right: 20px; box-sizing: border-box; 
                 /* position: relative; padding-top: 20px; */
 
-                span {font: 12px/1 'Roboto', sans-serif;margin-bottom: 10px; color: #2d4553;}
-                h2 {font: 500 15px/1.4 'Barlow', sans-serif; margin-bottom: 15px; color: #2d4553;}
+                span {font: 12px/1 'Roboto', sans-serif; margin-bottom: 10px; color: #2d4553;}
+                h3 {font: 500 15px/1.4 'Barlow', sans-serif; margin-bottom: 15px; color: #2d4553;}
                 .pic {
                     height: 180px; background: #666; margin-bottom: 10px;  overflow: hidden;
                     transform: translateX(-100px); opacity: 0; transition: 0.5s;
@@ -32,7 +32,7 @@
                     &:hover {transform: scale(1.2);}
                     }
                 }
-                .txt {height: 80px; padding: 10px; box-sizing: border-box; margin-bottom: 20px; font: 13px/1.4 'Roboto', sans-serif; color: #444;}
+                .txt {height: 80px;  box-sizing: border-box; margin-bottom: 20px; font: 13px/1.4 'Roboto', sans-serif; color: #444;}
                 >a {display: block; color: #fff; width: 60px; height: 25px; background:#4d5b64; text-align: center; font: 13px/25px 'Roboto', sans-serif;}
 
                 }

@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
     let url_search = 'https://www.flickr.com/services/rest/?method=flickr.photos.search';
     let key = '673aecd9f0fe2c86bdcaa64b50aca0ca';
     let per_page = 20;
@@ -15,14 +14,14 @@ $(document).ready(function(){
         tags = $('#keyword').val();
 
         if (tags == 0){
-            alert('검색어를 입력해주세요.');
+            alert('검색어를 입력하세요.');
             location.reload();
         }
 
-        page_num = 1;
+        //page_num = 1;
 
-        $('.pagenation a').removeClass('on');
-        $('.pagenation a').eq(0).addClass('on');
+        // $('.pagenation a').removeClass('on');
+        // $('.pagenation a').eq(0).addClass('on');
 
         call_data(url_search, key, page_num, per_page, tags);
         //$('#keyword').val('');
@@ -37,7 +36,7 @@ $(document).ready(function(){
         
         tags = $('#keyword').val();
 
-        page_num = 1;
+        //page_num = 1;
 
         if(keyword.keyCode == 13){
 
@@ -46,8 +45,8 @@ $(document).ready(function(){
                 location.reload();
             }
 
-            $('.pagenation a').removeClass('on');
-            $('.pagenation a').eq(0).addClass('on');
+            // $('.pagenation a').removeClass('on');
+            // $('.pagenation a').eq(0).addClass('on');
     
             call_data(url_search, key, page_num, per_page, tags);
             //$('#keyword').val('');

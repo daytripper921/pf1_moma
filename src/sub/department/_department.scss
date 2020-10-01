@@ -16,7 +16,7 @@
             width: 100%; height: 70VH; background: url('../img/org.jpg') no-repeat center top; background-size: contain;
 
             ul{
-                position: absolute; top: -1000px; left: 0; opacity: 0;
+                position: absolute; top: -10000px; left: 0; opacity: 0;
             }
         }
     }
@@ -30,7 +30,7 @@
     .department {
         .inner {
             .division {
-                height: auto; background: url('../img/sub/org.jpg') no-repeat center -9999px; 
+                height: auto; background: url('../img/org.jpg') no-repeat center -9999px; 
 
                 ul{
                     position: relative; top: 0px; left: 0; opacity: 1;
