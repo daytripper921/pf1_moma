@@ -4,7 +4,7 @@ $(document).ready(function(){
     let key = '673aecd9f0fe2c86bdcaa64b50aca0ca';
     let per_page = 20;
     let page_num = 1;
-    let tags = 'modern art';
+    let tags = 'painting';
 
     call_data(url_search, key, page_num, per_page, tags);
 
@@ -114,7 +114,7 @@ $(document).ready(function(){
                     .append(
                     $('<div>')
                         .append(
-                            $('<a>').attr({href : 'https://farm'+this.farm+'.staticflickr.com/'+this.server+'/'+this.id+'_'+this.secret+'_b.jpg'}) 
+                            $('<a>').attr({href : 'https://farm'+this.farm+'.staticflickr.com/'+this.server+'/'+this.id+'_'+this.secret+'_b.jpg'})
                             .append(
                                 $('<img>').attr({src : 'https://farm'+this.farm+'.staticflickr.com/'+this.server+'/'+this.id+'_'+this.secret+'_m.jpg'})
                             )
